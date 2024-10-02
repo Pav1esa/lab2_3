@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Павлеса Олег ПП-21</title>
+	</head>	
+	<body>
+		<script> 
+			"use strict";
+
+			// Введення віку користувачем
+			let age = parseInt(prompt("Введіть ваш вік")); 
+			let b = age % 10; // Остання цифра віку
+			let s; 
+
+			// Використання оператора SWITCH для вибору форми слова "рік"
+			switch (b) { 
+				case 1:
+					s = "рік"; 
+					break;
+				case 2:
+				case 3:
+				case 4:
+					s = "роки";
+					break; 
+				default:
+					s = "років";
+			}
+
+			// Якщо вік в інтервалі від 11 до 19, завжди використовуємо форму "років"
+			if (age > 10 && age < 20) {
+				s = "років"; 
+			}
+
+			// Виведення результату на екран
+			document.write("Вам - ", age, " ", s);
+		</script>
+	</body>
+</html>
